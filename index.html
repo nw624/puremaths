@@ -36,6 +36,7 @@
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#contact">contact</a></li>
+        <li><a href="#trigonometry#"></a></li>
       </ul>                 
     </header>
    
@@ -54,6 +55,500 @@
             <h2>About</h2>
             <p>
               Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
+            </p>
+          </div>
+
+          <div id="about" class="content-region hide">
+            <h2>About</h2>
+            <p>
+              ---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Trigometry {#intro}
+
+## Reciprocal Trig Ratios
+
+Up until now, we've seen three main trig ratios, which are:
+$sin(x)$, $cos(x)$ and $tan(x)$. We now move onto thinking about the inverse of these
+three trig functions. \
+
+>:::: {.def data-latex=""}
+::: {.definition name="cosec"} 
+\
+The inverse of the function $sin(x)$ is called $cosec(x)$, which can be written as
+\begin{equation*} 
+cosec(x)=
+\frac {1}{sin(x)}
+\end{equation*}
+:::
+\
+
+>:::: {.def data-latex=""}
+::: {.definition name="sec"} 
+\
+The inverse of the function $cos(x)$ is called $sec(x)$, which can be written as
+\begin{equation*} 
+sec(x)=
+\frac {1}{cos(x)}
+\end{equation*}
+:::
+\
+
+>:::: {.def data-latex=""}
+::: {.definition name="cot"} 
+\
+The inverse of the function $tan(x)$ is called $cot(x)$, which can be written as
+\begin{equation*} 
+cot(x)=
+\frac {1}{tan(x)}
+\end{equation*}
+:::
+\
+
+These may not seem like very useful functions for us at the moment, but we'll be moving onto
+showing some useful identities with them later on
+
+
+## Important Trig Identities
+Here, we introduce two new trig identities and see how we can prove that they are true. \
+
+>:::: {.the data-latex=""}
+::: {.theorem} 
+\
+$sec~^2~(x) = 1 + tan~^2~(x)$
+:::
+
+\
+
+>:::: {.pro data-latex=""}
+::: {.proof} 
+\
+We are going to make use of the equation $1 = sin~^2~(x) + cos~^2~(x)$ \
+In order to do this, we start by writing the equation $sec~^2~(x) = 1 + tan~^2~(x)$
+in the simplest way possible, which is in terms of $sin$ and $cos$. \
+As
+\begin{equation*} 
+sec^2 =
+\frac {1}{cos~^2~(x)}
+\end{equation*}
+and
+\begin{equation*}
+tan~^2 =
+\frac {sin~^2~(x)}{cos~^2~(x)}
+\end{equation*}
+we can rewrite our equation as 
+\begin{equation*} 
+\frac {1}{cos~^2~(x)}
+= 1 + 
+\frac {sin~^2~}{cos~^2~(x)}
+\end{equation*} \
+All we need to do now is to multiply everything in the equation by $cos~^2~(x)$
+and we get the result $$1 = sin~^2~(x) + cos~^2~(x)$$ which we know is true, 
+meaning that the identity $sec~^2~(x) = 1 + tan~^2~(x)$ must also be true.
+:::
+
+\
+
+>:::: {.the data-latex=""}
+::: {.theorem} 
+\
+$cosec^2(x) = 1 + cot^2(x)$
+:::
+\
+
+>:::: {.pro data-latex=""}
+::: {.proof} 
+\
+The proof of this formula is very similar to the formula above. \
+We are going to make use of the equation $1 = sin~^2~(x) + cos~^2~(x)$ \
+In order to do this, we start by writing the equation $cosec~^2~(x) = 1 + cot~^2~(x)$
+in the simplest way possible, which is in terms of $sin$ and $cos$. \
+As 
+\begin{equation*}
+cosec~^2~ =
+\frac {1}{sin~^2~(x)}
+\end{equation*}
+and
+\begin{equation*} 
+cot~^2 =
+\frac {cos~^2~(x)}{sin~^2~(x)}
+\end{equation*}
+we can rewrite our equation as 
+\begin{equation*} 
+\frac {1}{sin~^2~(x)}
+= 1 + 
+\frac {cos~^2~}{sin~^2~(x)}
+\end{equation*} \
+All we need to do now is to multiply everything in the equation by 
+$sin~^2~(x)$ \
+and we get the result \
+ \
+$$1 = cos~^2~(x) + sin~^2~(x)$$ which we know is true, 
+meaning that the identity $cosec~^2~(x) = 1 + cot~^2~(x)$ must also be true.
+:::
+
+These two formulae will be important us for a later section when we come onto proving trig
+identities.
+
+## Compound Angles
+
+So far we have only thought about trig terms when they're on their own, but what happens when we have two terms which are grouped together? Is there a way to simplify the expressions? This leads us to two equations below. \
+
+>:::: {.the data-latex=""}
+::: {.proposition name="Compound Angle Formulae"} 
+\
+For angles $A$ and $B$, we have that \
+$sin(A+B) = sin(A)cos(B) + cos(A)sin(B)$ \
+$cos(A+B) = cos(A)cos(B) - sin(A)sin(B)$
+:::
+\
+
+These equations may look complicated, but they are not too difficult to use. We'll look at a few examples involving these formulae. \
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Simplify $sin(30+45)$. \
+ \
+To solve this, we can set $A=30$ and $B=45$. \
+Using the first of the two formulae, we get that \
+$sin(30+45) = sin(30)cos(45) + cos(30)sin(45)$
+and given that \ 
+\begin{equation*}
+sin(30)=
+\frac {1}{2}
+\end{equation*} \
+\begin{equation*} 
+cos(30)=
+\frac {\sqrt{3}}{2}
+\end{equation*} \
+and \
+\begin{equation*} 
+sin(45) = cos(45) =
+\frac {1}{\sqrt{2}}
+\end{equation*} \
+we can simplify this even further to get that \
+ \
+\begin{equation*}
+sin(30+45)=
+\frac {1}{\sqrt{2}}(\frac {1}{2} + \frac {\sqrt{3}}{2})
+\end{equation*}
+:::
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Simplify $cos(60+75)$. \
+ \
+To solve this, we can set $A=60$ and $B=75$. \
+Using the first of the two formulae, we get that \
+$sin(60+75) = cos(60)cos(75) + sin(60)sin(75)$
+and given that \ 
+\begin{equation*}
+cos(60)=
+\frac{1}{2}
+\end{equation*} \
+\begin{equation*} 
+sin(60)=
+\frac{\sqrt{3}}{2}
+\end{equation*} \
+\begin{equation*} 
+cos(75)=
+\frac{\sqrt{3}-1}{2\sqrt{2}}
+\end{equation*} \
+and \
+\begin{equation*} 
+sin(75) = 
+\frac{\sqrt{3}+1}{2\sqrt{2}}
+\end{equation*} \
+we can simplify this even further to get that \
+ \
+\begin{equation*}
+cos(60+75)=
+\frac {1}{2} \frac {\sqrt{3}+1}{2\sqrt{2}} - \frac {\sqrt{3}}{2} \frac {\sqrt{3}+1}{2\sqrt{2}}
+\end{equation*}
+which is the same as
+\begin{equation*}
+cos(60+75)=
+\frac {\sqrt{3}+1}{4\sqrt{2}} - \frac{3 + \sqrt{3}}{4\sqrt{2}} = - \frac {2}{4\sqrt{2}}
+\end{equation*}
+:::
+
+## Double Angles
+
+We will now move on to looking at two formulae which will, to begin with, look pretty similar to the two formulae which we just saw in the previous section. These two formulae are known as the *Double Angle Formulae* and are as follows. \
+
+>:::: {.the data-latex=""}
+::: {.proposition name="Double Angle Formulae"} 
+\
+For an angle $A$, we have that \
+$$sin(2A) = 2sin(A)cos(A)$$ \
+$$cos(2A) = cos^2(A) - sin^2(A)$$
+:::
+  \
+  
+There is no need to know where these formulae come from, but we will now briefly see how we can obtain these two equations from the formulae for compound angles.
+ \
+
+>:::: {.the data-latex=""}
+::: {.proof} 
+\
+We are goimg to use the formulae from the compound angle section to prove these formulae. We do this by setting $$b=a$$. Then, we have that the formulae are \
+$sin(A+A) = sin(A)cos(A) + cos(A)sin(A)$ \
+$cos(A+A) = cos(A)cos(A) - sin(A)sin(A)$ \
+We can see that the first formula simplifies to \
+$sin(2A) = 2sin(A)cos(A)$ \ 
+as $sin(A)cos(A)=cos(A)sin(A)$ \
+and the second formula simplifies to \
+$cos(2A) = cos^2(A) - sin^2(A)$ \
+giving our two equations.
+:::
+
+Now that we've seen what these formulae involve, let's look at how we can use them in some examples.
+
+>:::: {.exa data-latex=""}
+:::{.example}
+\
+Simplify $sin(2*60)$. \
+ \
+We use the first of the two double angle formulae \
+$$sin(2A) = 2sin(A)cos(A)$$
+to get that
+$$sin(2x60) = 2sin(60)cos(60)$$
+which is equal to
+$$2* \frac{\sqrt{3}}{2}*\frac{1}{2} = frac{\sqrt{3}}{2}$$
+giving our final answer.
+ \
+:::
+
+>:::: {.exa data-latex=""}
+:::{.example}
+\
+Simplify $cos(90)$. \
+ \
+Normally, this identity can be easily remembered anyway, or worked out by looking 
+at a cos graph and finding the point on the graph where $cos(90)$ intersects the y-axis.
+However, these double angle formulae give another way of working it out. \
+We use the second of the two double angle formulae \
+$$cos(2A) = cos^2(A) - sin^2(A)$$
+We start by setting $2A=90$ so that we can use our formula, giving $A=45$. Then
+$$cos(2*45) = cos^2(45) - sin^2(45)$$
+In this case, $cos(45) = sin(45) = \frac{1}{\sqrt{2}}$ so
+$$cos^2(45) = sin^2(45) = \frac{1}{2}$$
+Using this in our formula gives us that 
+$$cos(2*45) = cos^2(45) - sin^2(45) = \frac{1}{2} - \frac{1}{2} = 0$$
+and so our final answer is just 0
+ \
+:::
+
+## Proving Trig Identities
+
+One of the main parts of this trig section is about proving trig identities. \
+We have already seen some trig identities in the AS part of this course, and we 
+will now move on to examine some more identities and prove these identities using
+formulae we already know. We'll also look at some more complex identities and see how we can prove them. \
+ \
+There are 5 main formulae which we have learned about so far, and these 5 formulae will be the key
+to proving pretty much all of our trig identities. These are: \
+ \
+$sin^2x + cos^2x = 1$ \
+$\frac{sinx}{cosx} = tan{x}$ \
+Our inverse trig identities, $\frac{1}{sinx} = cosecx$ \ $\frac{1}{cosx} = secx$ \ $\frac{1}{tanx} = cotx$ \
+$sec^2(x) = 1 + tan^2(x)$ \
+$cosec^2(x) = 1 + cot^2(x)$ \
+ \
+Let's see some examples of identities which we can prove using these.
+
+>:::: {.the data-latex=""}
+::: {.proposition}
+\
+\begin{equation*} cot(x) =
+\frac {cos(x)}{sin(x)}
+\end{equation*}
+:::
+\
+
+>:::: {.pro data-latex=""}
+::: {.proof} 
+\
+The function $tan(x)$ can be written as
+\begin{equation*} 
+\frac {sin(x)}{cos(x)}
+\end{equation*}
+and we also know that $cot(x)$ is equal to
+\begin{equation*} 
+\frac {1}{tan(x)}
+\end{equation*}
+:::
+
+This is the very basic idea of proof: We look at a statement and keep changing it using
+formulae until it matches the statement we know is true from a trig identity. \
+Let's have a look at a more difficult one. \
+
+>:::: {.exa data-latex=""}
+::: {.example}
+\
+Prove that $${cot(x)}{sin(x)} = cos(x) + cos(x)cot^2(x)$$
+:::
+\
+
+>:::: {.pro data-latex=""}
+:::{.proof}
+\
+The idea of most of these proofs is to break down the reciprocal trig ratios and $tan(x)$ terms into $sin(x)$ and $cos(x)$ terms.
+\
+ \
+We start off by writing all of the reciprocal trig ratios in terms of $sin(x)$, $cos(x)$ and $tan(x)$. This is usually
+the first step to proving any of these trig identities. \
+Using the fact that $cot(x) = \frac{1}{tan(x)}$, and equivalently, $cot^2(x) = \frac{1}{tan^2(x)}$,
+$${cot(x)}{sin(x)} = cos(x) + cos(x)cot^2(x)$$ can be written as
+$$\frac{sin(x)}{tan(x)} = cos(x) + \frac{cos(x)}{tan^2(x)}$$
+Then, we use the identity $$tan(x) = \frac{sin(x)}{cos(x)}$$ to split $tan(x)$ into the $sin(x)$ and $cos(x)$ components. This gives us
+$$\frac{cos(x)}{sin^2(x)} = cos(x) + \frac{cos^3(x)}{sin^2(x)}$$
+Notice that there is a common $cos(x)$ term in all of the variables. We can divide this equation by $cos(x)$ to get
+$$\frac{1}{sin^2(x)} = 1 + \frac{cos^2(x)}{sin^2(x)}$$
+which we know is true because is it just the same as
+$$cosec^2(x) = 1 + cot^2(x)$$
+using the reciprocal trig ratios which we know, and this equation
+is one of the trig identities which we have learned. Therefore, we have proved the statement.
+\
+:::
+
+This final example of proof does not need to be known for the exam, but gives some insight into
+where some of the identities we have come from. \
+
+>:::: {.exa data-latex=""}
+::: {.example}
+Non-Examinable
+\
+Prove that $$sin^2(x) + cos^2(x) = 1$$
+using the identities \
+$sin(x) = \frac{1}{2}(e^{ix} - e^{-ix})$ \ and \
+$cos(x) = \frac{1}{2}(e^{ix} + e^{-ix})$
+where $i = \sqrt{-1}$
+:::
+\
+
+>:::: {.pro data-latex=""}
+:::{.proof}
+Non-Examinable
+\
+If $sin(x) = \frac{1}{2}(e^{ix} - e^{-ix})$, then we must have that
+$$sin^2(x) = (\frac{1}{2}(e^{ix} - e^{-ix}))^2$$ which is equal to
+$$\frac{1}{4}(-e^{2ix} - e^{-2ix} + 2)$$ because $(e^{ix})^2 = -e^{2ix}$, similarly $(e^{-ix})^2 = -e^{-2ix}$
+and $e^{ix}e^{-ix} = 1 \
+We do the same thing with $cos(x)$
+If $cos(x) = \frac{1}{2}(e^{ix} + e^{-ix})$, then we must have that
+$$sin^2(x) = (\frac{1}{2}(e^{ix} + e^{-ix}))^2$$ which is equal to
+$$\frac{1}{4}(e^{2ix} + e^{-2ix} + 2)$$
+Adding these two terms together then gives
+$$sin^2(x) + cos^2(x) = \frac{1}{4}(-e^{2ix} - e^{-2ix} - 2) + \frac{1}{4}(e^{2ix} + e^{-2ix} + 2) = $\frac{1}{4}(4) = 1 $$
+:::
+
+## Harmonic Form
+
+### Converting to Harmonic Form
+We've seen one way to expand one trigonometric function into two functions, but how can we simplify two terms into one term? \
+ \
+A method we can use to simplify equations with two different trig terms is writing it in **Harmonic Form** \
+ \
+
+>:::: {.the data-latex=""}
+::: {.theorem name="Harmonic Form"} 
+\
+If $x$ is an angle, then \
+$asin(x) + bcos(x) = rsin(x + a)$ \
+where $a = tan~^-1~(\frac{b}{a})$ \
+and \
+r = \sqrt($a^2+b^2$)
+:::
+\
+
+We don't need to know how to prove this, but the proof can be found in the extra material section. \
+ \
+Let's look at a few examples of how to put this idea into practice. \
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Simplify $3sin(x) + 4cos(x)$ \
+ \
+We start by calculating the values of $r$ and $a$. \
+ \
+$r =$ \sqrt($a^2+b^2$) so $r =$ \sqrt($3^2+4^2$) = \sqrt($9+16$) = \sqrt(25) $= 5$ \
+$a = tan~^-1~(\frac{b}{a}) = tan~^-1~(\frac{4}{3}) = 53.1$ \
+ \
+This gives the result that $$3sin(x) + 4cos(x) = 5sin(x + 53.1)$$
+:::
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Simplify $12sin(x) + 5cos(x)$ \
+ \
+We start by calculating the values of $r$ and $a$. \
+ \
+$r =$ \sqrt($a^2+b^2$) so $r =$ \sqrt($12^2+5^2$) = \sqrt($144+25$) = \sqrt(169) $= 13$ \
+$a = tan~^-1~(\frac{b}{a}) = tan~^-1~(\frac{5}{12}) = 22.6$ \
+ \
+This gives the result that $$12sin(x) + 5cos(x) = 13sin(x + 22.6)$$
+:::
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Simplify $3sin(x) - 2cos(x)$ \
+This looks like it might be more complicated because we now have a $-$ sign involved, but
+actually the procedure is still the same. \
+We still square and add the $3$ and the $-2$ 
+and, which is just the same as squaring and adding $3$ and $2$ (as the square of the positive and 
+negative version of the number is just the same e.g. $1^2 = 1 and -1^2 = 1$). \ 
+We also do the same thing with finding the angle using $tan^{-1}$ but have to be careful to
+remember to include the $-$ sign in the fraction. \
+ \
+We start by calculating the values of $r$ and $a$. \
+ \
+$r =$ \sqrt($a^2+b^2$) so $r =$ \sqrt($3^2+4^2$) = \sqrt($9+4$) = \sqrt(13) \
+$a = tan~^-1~(\frac{b}{a}) = tan~^-1~(\frac{-2}{3}) = -33.69$ \
+ \
+This gives the result that $$3sin(x) - 2cos(x) = \sqrt(13) sin(x - 33.69)$$
+:::
+
+### Solving Equations using Harmonic Form
+
+We can also use this idea to solve equations, which may seem complicated at first, but 
+when we apply this idea, can make a lot simpler.
+
+>:::: {.exa data-latex=""}
+::: {.example} 
+\
+Solve $12sin(x) + 5cos(x) = 4$ \
+ \
+The left hand side is the same as the example which we saw before, but this time, we need to solve
+an equation not just find an expression for something. We start the same way as before to 
+reach the same point: \
+ \
+$r =$ \sqrt($a^2+b^2$) so $r =$ \sqrt($12^2+5^2$) = \sqrt($144+25$) = \sqrt(169) $= 13$ \
+$a = tan~^-1~(\frac{b}{a}) = tan~^-1~(\frac{5}{12}) = 22.6$ \
+ \
+So $$12sin(x) + 5cos(x) = 13sin(x + 22.6)$$ as before. \
+ \
+Then, we pop in the new expression we've found for the left-hand side in place of the old one to get 
+$$13sin(x + 22.6) = 4$$
+We are then looking to solve this equation by finding $x$. We do this by making it the subject of the
+formula, by rearranging. Initially, this makes the equation
+$$sin(x + 22.6) = \frac{4}{13}$$
+Then, we use $sin^{-1}$ to get
+$$x + 22.6 = sin^{-1} ( \frac{4}{13})$$
+which gives us
+$$x + 22.6 = 17.1$$
+and then we find that taking 22.6 over to the other side gives
+$$x = 17.1 - 22.6$$
+so
+$$x=-5.5$$
+:::
             </p>
           </div>
           
